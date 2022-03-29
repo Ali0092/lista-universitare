@@ -6,6 +6,7 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.standort.Constants.CountyName
 import com.example.standort.adapter.ItemAdapter
 import com.example.standort.databinding.ActivityMainBinding
 import com.example.standort.viewModel.appViewModel
@@ -23,7 +24,11 @@ class MainActivity : AppCompatActivity() {
         binding= ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         SettingUpRecyclerView()
-
+        binding.search.setOnClickListener {
+          val name=binding.textView.text?.toString()
+          if(!name.isNullOrEmpty())
+              vm.getResponses(name)
+        }
         vm.responseList.observe(this, Observer { response->
           if(response.isSuccessful){
               let {

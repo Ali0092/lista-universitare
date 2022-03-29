@@ -28,7 +28,6 @@ class ItemAdapter():RecyclerView.Adapter<ItemAdapter.MyViewHolder>() {
        val currentItem=items[position]
         holder.binding.apply {
             this.name.text=currentItem.name
-            this.province.text=currentItem.state
             this.mail.text=currentItem.domains[0]
         }
     }

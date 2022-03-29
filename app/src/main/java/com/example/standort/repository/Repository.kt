@@ -6,7 +6,7 @@ import retrofit2.Response
 
 class Repository(private val api: UniApi) {
 
-    fun getUniItem():Response<List<UniItem>>{
-      return api.getUniList()
+    suspend fun getUniItem(name:String):Response<List<UniItem>>{
+      return api.getUniList(name)
     }
 }

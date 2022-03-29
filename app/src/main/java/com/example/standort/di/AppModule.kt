@@ -19,10 +19,12 @@ object AppModule {
 
     //First Dependency....
    @Provides
+   @Singleton
    fun getRepo(api: UniApi):Repository=Repository(api)
 
     //Second Dependency....
     @Provides
+    @Singleton
     fun getApi(retrofit: Retrofit):UniApi=retrofit.create(UniApi::class.java)
 
     //Third Dependency.....

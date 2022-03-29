@@ -20,21 +20,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="name"
-            android:textSize="25sp" />
+            android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/province"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Province"
-            android:textSize="25sp" />
 
         <TextView
             android:id="@+id/mail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Domain"
-            android:textSize="25sp" />
+            android:textSize="20sp" />
 
 
     </androidx.appcompat.widget.LinearLayoutCompat>
